@@ -124,7 +124,7 @@
         </div>
 
         <script>
-            const API_URL = 'http://localhost:1000/api';
+            const API_URL = 'http://localhost:10000/api';
             
             // --- State Management ---
             let products = [];
@@ -167,7 +167,7 @@
                     renderProducts();
                 } catch (error) {
                     console.error('Failed to fetch products:', error);
-                    const errorMsg = 'Could not connect to the server. <br><br> <b class="font-medium">How to fix:</b> <br> 1. Make sure you have started the server by running `node server.js` in your terminal. <br> 2. Visit <b>http://localhost:1000</b> in your browser. Do not open the HTML file directly.';
+                    const errorMsg = 'Could not connect to the server. <br><br> <b class="font-medium">How to fix:</b> <br> 1. Make sure you have started the server by running `node server.js` in your terminal. <br> 2. Visit <b>http://localhost:10000</b> in your browser. Do not open the HTML file directly.';
                     productListEl.innerHTML = `<div class="col-span-full text-center text-red-600 bg-red-100 p-4 rounded-lg">${errorMsg}</div>`;
                 }
             }
@@ -446,7 +446,7 @@
                 document.body.appendChild(toast);
                 setTimeout(() => {
                     toast.remove();
-                }, 1000);
+                }, 10000);
             }
 
             // --- App Initialization ---
